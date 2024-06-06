@@ -57,6 +57,7 @@ _GENERATION_MODELS = {
     "ArcticForCausalLM": ("arctic", "ArcticForCausalLM"),
     "XverseForCausalLM": ("xverse", "XverseForCausalLM"),
     "Phi3SmallForCausalLM": ("phi3_small", "Phi3SmallForCausalLM"),
+    "CovSVDLlamaForCausalLM": ("modeling_oursvd_llama", "CovSVDLlamaForCausalLM") ## for CorDA model inference
 }
 
 _EMBEDDING_MODELS = {
