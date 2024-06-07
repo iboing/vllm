@@ -11,7 +11,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 from vllm.model_executor.layers.quantization.base_config import (
     QuantizationConfig)
 
-from vllm.config import LoRAConfig
+from vllm.config import LoRAConfig, CacheConfig
 from vllm.model_executor.layers.linear import LinearMethodBase, MergedColumnParallelLinear, QKVParallelLinear, RowParallelLinear
 from vllm.model_executor.model_loader.weight_utils import default_weight_loader
 from vllm.attention import Attention, AttentionMetadata
@@ -40,7 +40,8 @@ class CovSVDLlamaForCausalLM(LlamaForCausalLM):
     def __init__(
         self, 
 	config:CovSVDLlamaConfig,
-        linear_method: Optional[LinearMethodBase] = None,
+    #linear_method: Optional[LinearMethodBase] = None,
+    cache_config: Optional[CacheConfig] = None,
 	quant_config: Optional[QuantizationConfig]=None,
 	lora_config: Optional[LoRAConfig]=None,
     ):
